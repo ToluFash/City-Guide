@@ -7,7 +7,6 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 from api.commonresponses import DOWNSTREAM_ERROR_RESPONSE
-from api.modules.github.utils import make_github_issue
 from api.modules.hyperlocal.constants import PLACES_SEARCH_API_URL
 from api.modules.hyperlocal.hyperlocal_response import HyperLocalResponse
 

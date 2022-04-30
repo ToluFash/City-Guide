@@ -3,12 +3,9 @@ from django.urls import path
 from rest_framework.authtoken import views as auth_views
 
 from api.modules.admin import views as admin_views
-from api.modules.analytics import views as analytics_views
 from api.modules.city import views as city_views
 from api.modules.currency import views as currency_views
-from api.modules.feedback import views as feedback_views
 from api.modules.food import views as food_views
-from api.modules.github import views as github_views
 from api.modules.holidays import views as holidays_views
 from api.modules.hyperlocal import views as places_views
 from api.modules.notification import views as notification_views
@@ -94,16 +91,9 @@ urlpatterns = [
          notification_views.get_number_of_unread_notifications,
          name="number-of-unread-notifications"),
 
-    # Feedback
-    path('add-feedback', feedback_views.add_feedback, name="add-feedback"),
-    path('get-all-user-feedback', feedback_views.get_all_user_feedback, name="get-all-user-feedback"),
-    path('get-feedback/<int:feedback_id>', feedback_views.get_feedback, name="get-feedback"),
-
-
     # Twitter API
     path('get-city-trends/<int:city_id>', twitter_views.get_city_trends, name='get-city-trends'),
     path('get-search-tweets/<str:query>', twitter_views.get_search_tweets, name='get-search-tweets'),
-
 
     # Hyperlocal API
     path('get-places/<str:latitude>/<str:longitude>/<str:places_query>', places_views.get_places, name='get-places'),
