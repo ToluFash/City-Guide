@@ -22,6 +22,6 @@ requests==2.21.0
 requests-cache==0.4.13
 requests-oauthlib==1.0.0
 sqlparse==0.3.0
--e git+https://github.com/ToluFash/City-Guide.git@b994a600d6351a122aa981f12f1d777f63f73c6a#egg=UNKNOWN
+-e git+https://github.com/ToluFash/City-Guide.git@0d22edaa7b7a3676ee95e539c6990debaa104079#egg=UNKNOWN
 urllib3==1.26.5
 whitenoise==3.3.1
